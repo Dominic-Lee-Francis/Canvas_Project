@@ -18,23 +18,27 @@
     
     <!-- custom scripts -->
     <script defer src="/js/scripts.js"></script>
+    <script defer src="/js/toolbar.js"></script>
     <script defer src="/js/drawingLine.js"></script>
 
 </head>
 <body>
     <div class="container">
         <section class="toolsBoard">
+            <div class="title">
+                Welcome to the Drawing Room
+            </div>
             <div class="row">
                 <label for="" class="title">Shapes</label>
                 <ul class="options">
-                    <li class="option">
-                        <button class="btn" id="rectangleBtn">Rectangle</button>
+                    <li class="option tool" id="rectangle">
+                        <button class="btn tool" id="rectangleBtn">Rectangle</button>
                     </li>
-                    <li class="option">
-                        <button class="btn" id="circleBtn">Circle</button>
+                    <li class="option tool" id="circle">
+                        <button class="btn tool" id="circleBtn">Circle</button>
                     </li>
-                    <li class="option">
-                        <button class="btn" id="triangleBtn">Triangle</button>
+                    <li class="option tool" id="triangle">
+                        <button class="btn tool" id="triangleBtn">Triangle</button>
                     </li>
                     <li class="option">
                         <input type="checkbox" id="fillColor">
@@ -45,11 +49,11 @@
             <div class="row">
                 <label for="" class="title">Options</label>
                 <ul class="options">
-                    <li class="option">
-                        <button class="btn" id="brushBtn">Brush</button>
+                    <li class="option tool" id="brush">
+                        <button class="btn tool" id="brushBtn">Brush</button>
                     </li>
-                    <li class="option">
-                        <button class="btn" id="eraserBtn">Eraser</button>
+                    <li class="option tool" id="eraser">
+                        <button class="btn tool" id="eraserBtn">Eraser</button>
                     </li>
                     <li class="option">
                         <input type="range" id="sizeSlider">
@@ -74,6 +78,7 @@
             <canvas></canvas>
         </section>
     </div>
+
     
 </body>
 </html>
