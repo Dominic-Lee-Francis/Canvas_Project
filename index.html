@@ -22,7 +22,58 @@
 
 </head>
 <body>
-
+    <div class="container">
+        <section class="toolsBoard">
+            <div class="row">
+                <label for="" class="title">Shapes</label>
+                <ul class="options">
+                    <li class="option">
+                        <button class="btn" id="rectangleBtn">Rectangle</button>
+                    </li>
+                    <li class="option">
+                        <button class="btn" id="circleBtn">Circle</button>
+                    </li>
+                    <li class="option">
+                        <button class="btn" id="triangleBtn">Triangle</button>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fillColor">
+                        <label for="fillColor">Fill Color</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label for="" class="title">Options</label>
+                <ul class="options">
+                    <li class="option">
+                        <button class="btn" id="brushBtn">Brush</button>
+                    </li>
+                    <li class="option">
+                        <button class="btn" id="eraserBtn">Eraser</button>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="sizeSlider">
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label for="" class="title">Color</label>
+                <ul class="options">
+                    <li class="option">
+                        <label for="stroke">Color</label>
+                        <input type="color" id="colorPicker" name="color">
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <button class="btn" id="clearCanvasBtn">Clear Canvas</button>
+                <button class="btn" id="saveCanvasBtn">Save Canvas</button>
+            </div>
+        </section>
+        <section class="drawingBoard">
+            <canvas></canvas>
+        </section>
+    </div>
     
 </body>
 </html>
