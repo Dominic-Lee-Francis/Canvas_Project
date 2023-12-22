@@ -64,6 +64,14 @@ fillInColor = colorPicker.addEventListener('change', () => ctx.fillStyle = color
 
 clearCanvasBtn.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height)); //clears canvas
 
+saveCanvasBtn.addEventListener('click', () => {
+    let image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+    let link = document.createElement('a');
+    link.download = "my-Image.png";
+    link.href = image;
+    link.click();
+});
+
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', drawing);
 canvas.addEventListener('mouseup', () => isDrawing = false);
