@@ -15,10 +15,17 @@ brushWidth = 5,
 selectedColor = 'black',
 fillInColor = 'black';
 
+const setCanvasBackground = () => {
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = selectedColor;
+}
+
 window.addEventListener('load', () => {
     // sets width and height of the canvas
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
+    setCanvasBackground();
 });
 
 const startDrawing = (event) => {
@@ -62,7 +69,10 @@ sizeSlider.addEventListener('change', () => brushWidth = sizeSlider.value); //si
 selectedColor = colorPicker.addEventListener('change', () => ctx.strokeStyle = colorPicker.value); //color of brush is changed by color picker
 fillInColor = colorPicker.addEventListener('change', () => ctx.fillStyle = colorPicker.value);
 
-clearCanvasBtn.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height)); //clears canvas
+clearCanvasBtn.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); //clears canvas
+    setCanvasBackground();
+});    
 
 saveCanvasBtn.addEventListener('click', () => {
     let image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
