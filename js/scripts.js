@@ -38,6 +38,8 @@ const drawing = (event) => {
         // draws rectangle, see code in rectangle.js
     } else if(selectedTool === "circle") {
         drawCircle(event);
+    } else if(selectedTool === "triangle") {
+        drawTriangle(event);
     }
     
 }
