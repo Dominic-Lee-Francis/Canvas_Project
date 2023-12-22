@@ -40,6 +40,8 @@ const drawing = (event) => {
         drawCircle(event);
     } else if(selectedTool === "triangle") {
         drawTriangle(event);
+    } else if(selectedTool === "straightLine") {
+        drawStraightLine(event);
     }
     
 }
