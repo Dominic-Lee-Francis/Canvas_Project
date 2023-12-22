@@ -3,6 +3,8 @@ toolBtns = document.querySelectorAll('.tool'),
 fillColor = document.querySelector('#fillColor'),
 sizeSlider = document.querySelector('#sizeSlider'),
 colorPicker = document.querySelector('#colorPicker'),
+clearCanvasBtn = document.querySelector('#clearCanvasBtn'),
+saveCanvasBtn = document.querySelector('#saveCanvasBtn'),
 ctx = canvas.getContext('2d');
 
 // global variables and their default values
@@ -35,7 +37,10 @@ const drawing = (event) => {
     if(!isDrawing) return; // if isDrawing is false, stop the function here, so only activates this function while isDrawing is true
     ctx.putImageData(snapshot, 0, 0); //add the snapshot copied canvas on to this canvas
 
-    if(selectedTool === "brush") {
+    if(selectedTool === "brush" || selectedTool === "eraser") {
+        // if selected tool is eraser then set strokeStyle to white.
+        // if selected tool is brush then set strokeStyle to selectedColor
+        ctx.strokeStyle = selectedTool === "eraser" ? "#fff" : selectedColor; 
         ctx.lineTo(event.offsetX, event.offsetY); //creates a line using mouse
         ctx.stroke(); //adds color to the line
         // this is just for a line
@@ -56,6 +61,8 @@ sizeSlider.addEventListener('change', () => brushWidth = sizeSlider.value); //si
 
 selectedColor = colorPicker.addEventListener('change', () => ctx.strokeStyle = colorPicker.value); //color of brush is changed by color picker
 fillInColor = colorPicker.addEventListener('change', () => ctx.fillStyle = colorPicker.value);
+
+clearCanvasBtn.addEventListener('click', () => ctx.clearRect(0, 0, canvas.width, canvas.height)); //clears canvas
 
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', drawing);
