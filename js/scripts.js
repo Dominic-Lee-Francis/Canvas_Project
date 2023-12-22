@@ -2,13 +2,16 @@ const canvas = document.querySelector('canvas'),
 toolBtns = document.querySelectorAll('.tool'),
 fillColor = document.querySelector('#fillColor'),
 sizeSlider = document.querySelector('#sizeSlider'),
+colorPicker = document.querySelector('#colorPicker'),
 ctx = canvas.getContext('2d');
 
 // global variables and their default values
 let prevMouseX, prevMouseY, snapshot,
 isDrawing = false,
 selectedTool = 'brush',
-brushWidth = 5;
+brushWidth = 5,
+selectedColor = 'black',
+fillInColor = 'black';
 
 window.addEventListener('load', () => {
     // sets width and height of the canvas
@@ -22,6 +25,8 @@ const startDrawing = (event) => {
     prevMouseY =event.offsetY; //sets current mouse position as prevMouseY value
     ctx.beginPath(); //creates new path to draw from
     ctx.lineWidth = brushWidth; //uses brush width to change line width
+    ctx.strokeStyle = selectedColor; //uses selectedColor to change line color
+    ctx.fillStyle = selectedColor; //uses selectedColor to change fill color
     // copies canvas data and then stores it in snapshot variable aka avoids dragging the shapes around
     snapshot = ctx.getImageData(0, 0, canvas.width, canvas.height); 
 }
@@ -47,7 +52,10 @@ const drawing = (event) => {
     
 }
 
-sizeSlider.addEventListener('change', () => brushWidth = sizeSlider.value);
+sizeSlider.addEventListener('change', () => brushWidth = sizeSlider.value); //size of brush is changed by slider
+
+selectedColor = colorPicker.addEventListener('change', () => ctx.strokeStyle = colorPicker.value); //color of brush is changed by color picker
+fillInColor = colorPicker.addEventListener('change', () => ctx.fillStyle = colorPicker.value);
 
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', drawing);
