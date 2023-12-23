@@ -1,0 +1,11 @@
+#colorPicker {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+#colorPickerBackground {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+} 

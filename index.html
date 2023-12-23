@@ -8,6 +8,11 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/sliderCheckboxColorPickerBtns.css">
+    <link rel="stylesheet" href="/css/sliderCheckbox.css">
+    <link rel="stylesheet" href="/css/colorPicker.css">
+    <link rel="stylesheet" href="/css/btns.css">
+    <link rel="stylesheet" href="/css/canvas.css">
 
     
     <!-- jQuery library -->
@@ -37,7 +42,7 @@
         <div class="container">
             <section class="toolsBoard">
                 <div class="row">
-                    <label for="" class="title">Shape Tools</label>
+                    <label for="" class="title ">Shape Tools</label>
                     <ul class="options">
                         <li class="option tool svg" id="rectangle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2 20V4h20v16zm2-2h16V6H4zm0 0V6z"/></svg>
@@ -53,7 +58,7 @@
                         </li>
                         <li class="option">
                             <input type="checkbox" id="fillColor">
-                            <label for="fillColor">Fill Color</label>
+                            <label for="fillColor" class="fillColorLabel">Fill Color</label>
                         </li>
                     </ul>
                 </div>
@@ -87,12 +92,12 @@
                 </div>
                 <div class="row">
                     <label for="" class="title">Pick your Color</label>
-                    <ul class="options">
-                        <li class="option">
+                    <ul class="options colorList">
+                        <li class="option colorListItem">
                             <label for="stroke">Brush Color</label>
                             <input type="color" id="colorPicker" name="color">
                         </li>
-                        <li class="option">
+                        <li class="option colorListItem">
                             <label for="stroke">Background Color</label>
                             <input type="color" id="colorPickerBackground" name="color" value="#ffffff">
                         </li>
