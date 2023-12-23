@@ -1,16 +1,43 @@
 #colorPicker {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
     width: 60px;
+    cursor: pointer;
+}
+
+#colorPicker::-webkit-color-swatch-wrapper {
+    padding: 2px;
+    border-radius: 15px;
+    border: solid 2px black;
+}
+
+#colorPicker::-webkit-color-swatch {
+    border: solid 2px black;
+    border-radius: 15px;
+    padding: 2px;
 }
 
 #colorPickerBackground {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    cursor: pointer;
-    align-items: flex-end;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
     width: 60px;
-} 
+    cursor: pointer;
+}
+
+#colorPickerBackground::-webkit-color-swatch-wrapper {
+    padding: 2px;
+    border-radius: 15px;
+    border: solid 2px black;
+}
+
+#colorPickerBackground::-webkit-color-swatch {
+    border: solid 2px black;
+    border-radius: 15px;
+    padding: 2px;
+}
