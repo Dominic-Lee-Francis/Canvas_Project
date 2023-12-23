@@ -7,6 +7,7 @@ clearCanvasBtn = document.querySelector('#clearCanvasBtn'),
 saveCanvasBtn = document.querySelector('#saveCanvasBtn'),
 ctx = canvas.getContext('2d');
 
+
 // global variables and their default values
 let prevMouseX, prevMouseY, snapshot,
 isDrawing = false,
@@ -15,12 +16,15 @@ brushWidth = 5,
 selectedColor = 'black',
 fillInColor = 'black';
 
+
+// sets canvas background to white
 const setCanvasBackground = () => {
     ctx.fillStyle = '#fff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = selectedColor;
 }
 
+// loads canvas when page loads
 window.addEventListener('load', () => {
     // sets width and height of the canvas
     canvas.width = canvas.offsetWidth;
@@ -66,10 +70,8 @@ const drawing = (event) => {
     
 }
 
- 
-
-
-
+// adds event listeners to the canvas for mouse down, mouse move, mouse up and mouse leave
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', drawing);
 canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener('mouseleave', () => isDrawing = false);
