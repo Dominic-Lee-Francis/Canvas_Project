@@ -1,3 +1,6 @@
+/**
+ * Draws a triangle on the canvas based on the mouse position and event.
+ */
 const drawTriangle = (event) => {
     ctx.beginPath(); //creates new path to draw triangle
     ctx.moveTo(prevMouseX, prevMouseY); //moves triangle from mouse position
