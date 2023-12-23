@@ -1,3 +1,8 @@
+/**
+ * This is the index.js file for the canvas.
+ * It contains the code for initializing the canvas, setting up event listeners, and handling drawing functions.
+ */
+// 
 const canvas = document.querySelector('canvas'),
 toolBtns = document.querySelectorAll('.tool'),
 fillColor = document.querySelector('#fillColor'),
