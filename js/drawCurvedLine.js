@@ -1,8 +1,8 @@
 const drawCurvedLine = (event) => {
     ctx.beginPath(); //creates new path to draw straight line
 
-    let controlPointX = 50;
-    let controlPointY = 50;
+    let controlPointX = 400;
+    let controlPointY = 400;
 
     ctx.moveTo(prevMouseX, prevMouseY); //moves from mouse position
     ctx.quadraticCurveTo(controlPointX, controlPointY, event.offsetX, event.offsetY);
