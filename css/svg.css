@@ -1,0 +1,7 @@
+svg {
+    fill: black;
+}
+
+svg:hover {
+    fill: #ff0000;
+}

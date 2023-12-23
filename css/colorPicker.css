@@ -1,11 +1,14 @@
 #colorPicker {
+    display: flex;
+    align-self: center;
+    justify-content: center;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
 }
 
 #colorPickerBackground {
+    display: flex;
+    align-self: center;
+    justify-content: center;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    align-items: flex-end;
 } 

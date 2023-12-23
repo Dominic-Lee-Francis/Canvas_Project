@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/colorPicker.css">
     <link rel="stylesheet" href="/css/btns.css">
     <link rel="stylesheet" href="/css/canvas.css">
+    <link rel="stylesheet" href="/css/svg.css">
 
     
     <!-- jQuery library -->
@@ -35,9 +36,6 @@
 
 </head>
 <body>
-    <header>
-        <h1>Welcome!</h1>
-    </header>
     <div class="canvasToolBoard">
         <div class="container">
             <section class="toolsBoard">
@@ -78,7 +76,7 @@
                             <p>Curved Line</p>
                         </li>
                         <li class="option tool" id="eraser">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95z"/></svg>
                             <p>Eraser</p>
                         </li>
                         <li class="option tool" id="undoCanvasBtn">
@@ -94,18 +92,19 @@
                     <label for="" class="title">Pick your Color</label>
                     <ul class="options colorList">
                         <li class="option colorListItem">
-                            <label for="stroke">Brush Color</label>
+                            <label for="stroke">Brush</label>
                             <input type="color" id="colorPicker" name="color">
                         </li>
                         <li class="option colorListItem">
-                            <label for="stroke">Background Color</label>
+                            <label for="stroke">Background</label>
                             <input type="color" id="colorPickerBackground" name="color" value="#ffffff">
                         </li>
                     </ul>
                 </div>
                 <div class="row">
-                    <button class="btn" id="clearCanvasBtn">Clear Canvas</button>
-                    <button class="btn" id="saveCanvasBtn">Save Canvas</button>
+                    <label for="" class="title">Save your Image</label>
+                    <button class="btn" id="saveCanvasBtn">Save Image</button>
+                    <button class="btn" id="clearCanvasBtn">Delete Image</button> 
                 </div>
             </section>
             <section class="drawingBoard">

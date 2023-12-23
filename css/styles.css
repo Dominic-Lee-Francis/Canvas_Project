@@ -10,24 +10,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* header, change background color here */
-header {
-    width: 100%;
-    max-height: 25px;
-    margin-bottom: 20px;
-}
-
-/* header h1, change h1 here */
-header h1 {
-    text-align: center;
-    padding: 10px;
-    border-radius: 7px;
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
 /* everything around the the toolbar and canvas and including */
 .canvasToolBoard {
     background-image: url(../images/bg.jpg);
