@@ -6,6 +6,12 @@ Drawing Room
 
 This project is a Canvas application that allows users to draw lines, rectangles, circles, and more. It includes various features such as a color picker, mouse event capturing, undo/redo functionality, a save button, text insertion, filters, a fill bucket, zoom functions, and drag and drop functions.
 
+## How to use
+
+INSERT VIDEO
+
+
+
 ## Features
 
 - Drawing lines, rectangles, circles, and more
