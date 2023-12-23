@@ -14,6 +14,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 130vh;
 }
 
 /* toolbar and canvas, not blank space to the left or right */
