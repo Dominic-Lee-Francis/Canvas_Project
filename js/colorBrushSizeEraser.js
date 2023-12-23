@@ -3,6 +3,12 @@ sizeSlider.addEventListener('change', () => brushWidth = sizeSlider.value); //si
 selectedColor = colorPicker.addEventListener('change', () => ctx.strokeStyle = colorPicker.value); //color of brush is changed by color picker
 fillInColor = colorPicker.addEventListener('change', () => ctx.fillStyle = colorPicker.value);
 
+fillInBackground = colorPickerBackground.addEventListener('change', () => {
+    ctx.fillStyle = colorPickerBackground.value;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = colorPickerBackground.value;
+}); //color of background is changed by color picker
+
 clearCanvasBtn.addEventListener('click', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height); //clears canvas
     setCanvasBackground();

@@ -3,6 +3,7 @@ toolBtns = document.querySelectorAll('.tool'),
 fillColor = document.querySelector('#fillColor'),
 sizeSlider = document.querySelector('#sizeSlider'),
 colorPicker = document.querySelector('#colorPicker'),
+colorPickerBackground = document.querySelector('#colorPickerBackground'),
 clearCanvasBtn = document.querySelector('#clearCanvasBtn'),
 saveCanvasBtn = document.querySelector('#saveCanvasBtn'),
 ctx = canvas.getContext('2d');
@@ -14,14 +15,15 @@ isDrawing = false,
 selectedTool = 'brush',
 brushWidth = 5,
 selectedColor = 'black',
+fillInBackground = '#ffffff',
 fillInColor = 'black';
 
 
 // sets canvas background to white
 const setCanvasBackground = () => {
-    ctx.fillStyle = '#fff';
+    ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = selectedColor;
+    ctx.fillStyle = fillInBackground;
 }
 
 // loads canvas when page loads
