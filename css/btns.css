@@ -4,9 +4,13 @@
     border: none;
     outline: none;
     padding: 10px 0;
-    margin-bottom: 13px;
+    margin-bottom: 14px;
     color: black;
     border: 1px solid black;
     background: none;
     cursor: pointer;
+}
+
+#saveCanvasBtn {
+    margin-top: 14px;
 }
