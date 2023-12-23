@@ -1,10 +1,11 @@
 const drawCurvedLine = (event) => {
     ctx.beginPath(); //creates new path to draw straight line
 
-    let controlPointX = 10;
-    let controlPointY = 10;
+    let controlPointX = 50;
+    let controlPointY = 50;
 
     ctx.moveTo(prevMouseX, prevMouseY); //moves from mouse position
-    ctx.bezierCurveTo(prevMouseX, prevMouseY, controlPointX, controlPointY, event.offsetX, event.offsetY);
+    ctx.quadraticCurveTo(controlPointX, controlPointY, event.offsetX, event.offsetY);
+    // ctx.bezierCurveTo(prevMouseX, prevMouseY, controlPointX, controlPointY, event.offsetX, event.offsetY);
     ctx.stroke();
 }

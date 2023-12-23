@@ -9,6 +9,7 @@ fillColor = document.querySelector('#fillColor'),
 sizeSlider = document.querySelector('#sizeSlider'),
 colorPicker = document.querySelector('#colorPicker'),
 colorPickerBackground = document.querySelector('#colorPickerBackground'),
+undoCanvasBtn = document.querySelector('#undoCanvasBtn'),
 clearCanvasBtn = document.querySelector('#clearCanvasBtn'),
 saveCanvasBtn = document.querySelector('#saveCanvasBtn'),
 ctx = canvas.getContext('2d');
@@ -22,6 +23,9 @@ brushWidth = 5,
 selectedColor = 'black',
 fillInBackground = '#ffffff',
 fillInColor = 'black';
+
+let restoreArray = [];
+let index = -1;
 
 
 // sets canvas background to white
@@ -58,7 +62,7 @@ const drawing = (event) => {
     if(selectedTool === "brush" || selectedTool === "eraser") {
         // if selected tool is eraser then set strokeStyle to white.
         // if selected tool is brush then set strokeStyle to selectedColor
-        ctx.strokeStyle = selectedTool === "eraser" ? "#fff" : selectedColor; 
+        ctx.strokeStyle = selectedTool === "eraser" ? '#fff' : selectedColor; 
         ctx.lineTo(event.offsetX, event.offsetY); //creates a line using mouse
         ctx.stroke(); //adds color to the line
         // this is just for a line
@@ -77,8 +81,12 @@ const drawing = (event) => {
     
 }
 
+
+
+
+
 // adds event listeners to the canvas for mouse down, mouse move, mouse up and mouse leave
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', drawing);
-canvas.addEventListener('mouseup', () => isDrawing = false);
-canvas.addEventListener('mouseleave', () => isDrawing = false);
+canvas.addEventListener('mouseup', () => isDrawing = false && restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height)), index++);
+canvas.addEventListener('mouseleave', () => isDrawing = false && restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height)), index++);
