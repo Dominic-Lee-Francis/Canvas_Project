@@ -60,6 +60,8 @@ const drawing = (event) => {
         drawTriangle(event);
     } else if(selectedTool === "straightLine") {
         drawStraightLine(event);
+    } else if(selectedTool === "curvedLine") {
+        drawCurvedLine(event);
     }
     
 }
