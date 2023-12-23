@@ -5,8 +5,6 @@
 
 /* whole body, change font here */
 body {
-    background-color: black;
-    min-height: 100vh;
     font-family: 'Roboto', sans-serif;
 }
 
