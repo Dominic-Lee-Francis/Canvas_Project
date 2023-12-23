@@ -28,6 +28,8 @@ let restoreArray = [];
 let index = -1;
 
 
+
+
 // sets canvas background to white
 const setCanvasBackground = () => {
     ctx.fillStyle = '#ffffff';
@@ -45,8 +47,8 @@ window.addEventListener('load', () => {
 
 const startDrawing = (event) => {
     isDrawing = true;
-    prevMouseX =event.offsetX; //sets current mouse position as prevMouseX value
-    prevMouseY =event.offsetY; //sets current mouse position as prevMouseY value
+    prevMouseX = event.offsetX; //sets current mouse position as prevMouseX value
+    prevMouseY = event.offsetY; //sets current mouse position as prevMouseY value
     ctx.beginPath(); //creates new path to draw from
     ctx.lineWidth = brushWidth; //uses brush width to change line width
     ctx.strokeStyle = selectedColor; //uses selectedColor to change line color
@@ -59,7 +61,7 @@ const drawing = (event) => {
     if(!isDrawing) return; // if isDrawing is false, stop the function here, so only activates this function while isDrawing is true
     ctx.putImageData(snapshot, 0, 0); //add the snapshot copied canvas on to this canvas
 
-    if(selectedTool === "brush" || selectedTool === "eraser") {
+    if(selectedTool === 'brush' || selectedTool === "eraser") {
         // if selected tool is eraser then set strokeStyle to white.
         // if selected tool is brush then set strokeStyle to selectedColor
         ctx.strokeStyle = selectedTool === "eraser" ? '#fff' : selectedColor; 
@@ -77,16 +79,15 @@ const drawing = (event) => {
         drawStraightLine(event);
     } else if(selectedTool === "curvedLine") {
         drawCurvedLine(event);
+    } else if(selectedTool === "brush") {
+        brushTool(event);
     }
     
 }
 
 
-
-
-
 // adds event listeners to the canvas for mouse down, mouse move, mouse up and mouse leave
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', drawing);
-canvas.addEventListener('mouseup', () => isDrawing = false && restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height)), index++);
-canvas.addEventListener('mouseleave', () => isDrawing = false && restoreArray.push(ctx.getImageData(0, 0, canvas.width, canvas.height)), index++);
+canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener('mouseleave', () => isDrawing = false);
