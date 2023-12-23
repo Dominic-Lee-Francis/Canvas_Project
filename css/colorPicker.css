@@ -3,6 +3,7 @@
     align-self: center;
     justify-content: center;
     cursor: pointer;
+    width: 60px;
 }
 
 #colorPickerBackground {
@@ -11,4 +12,5 @@
     justify-content: center;
     cursor: pointer;
     align-items: flex-end;
+    width: 60px;
 } 
