@@ -59,10 +59,12 @@
     margin-left: 5px;
 }
 
+/* slows transition down when pointer leaves */
 .checkBoxFill {
     transition: transform 1000ms, background-color 0.3s, color 0.3s;
 }
 
+/* moves div up when hovering and turns text white */
 .checkBoxFill:hover {
     transform: translateY(-4px);
     background-color: none;

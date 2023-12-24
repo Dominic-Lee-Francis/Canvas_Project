@@ -2,11 +2,13 @@ svg {
     fill: black;
 }
 
+/* slows transition down when mouse leaves */
 .svg {
     transition: transform 1000ms, background-color 0.3s, color 0.3s;
 
 }
 
+/* moves div up and changes font color when hovering */
 .svg:hover {
     transform: translateY(-4px);
     background-color: none;
