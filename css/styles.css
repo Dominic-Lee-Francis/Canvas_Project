@@ -8,14 +8,88 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* 
+
+This section is for  all animation code
+
+*/
+
+/* 
+
+Utility Classes
+
+*/
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate--infinity {
+    animation-iteration-count: infinite;
+}
+
+.animate--fast {
+    animation-duration: 1s;
+}
+
+.animate--slow {
+    animation-duration: 2s;
+}
+
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slideInLeft {
+    animation-name: slideInLeft;
+    animation-timing-function: ease-in;
+}
+
+.slideInRight {
+    animation-name: slideInRight;
+    animation-timing-function: ease-in;
+}
+
+
+
 /* everything around the the toolbar and canvas and including */
 .canvasToolBoard {
     background-image: url(../images/bg.jpg);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 160vh;
+    min-height: 120vh;
 }
+
+.h1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    font-family: 'Kalnia', cursive;
+    font-size: 50px;
+    font-weight: 200;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
 
 /* toolbar and canvas, not blank space to the left or right */
 .container {
@@ -25,6 +99,7 @@ body {
     max-width: 1200px;
     gap: 10px;
     padding: 10px;
+    
 }
 
 /* change opacity and border-radius of toolbar */
@@ -48,6 +123,7 @@ ul {
     padding: 0;
     margin: 0;
     text-align: center;
+    
 }
 
 .toolsBoard {

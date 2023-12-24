@@ -7,6 +7,7 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/animation.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/sliderCheckbox.css">
     <link rel="stylesheet" href="/css/colorPicker.css">
@@ -36,8 +37,9 @@
 </head>
 <body>
     <div class="canvasToolBoard">
+        <h1 class="h1">Welcome to the Drawing Room</h1>
         <div class="container">
-            <section class="toolsBoard">
+            <section class="toolsBoard animate animate--fast slideInLeft">
                 <div class="row">
                     <label for="" class="title ">Shape Tools</label>
                     <ul class="options">
@@ -106,7 +108,7 @@
                     <button class="btn" id="clearCanvasBtn">Delete Image</button> 
                 </div>
             </section>
-            <section class="drawingBoard">
+            <section class="drawingBoard animate animate--fast slideInLeft">
                 <canvas></canvas>
             </section>
         </div>
