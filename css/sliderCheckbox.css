@@ -48,7 +48,54 @@
     padding-bottom: 10px;
 }
 
-/* Checkbox */
+.range .field input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: rgba(128, 128, 128, 0.6);
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* chrome and other browsers */
+.range .field input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 19px;
+    height: 19px;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+/* chrome and other browsers hover */
+.range .field input[type="range"]::-webkit-slider-thumb:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* firefox */
+.range .field input[type="range"]::-moz-range-thumb {
+    width: 19px;
+    height: 19px;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+/* firefox hover */
+.range .field input[type="range"]::-moz-range-thumb:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* 
+
+Checkbox
+
+*/
 
 /* checkbox div */
 .wrapperCheckBox {
