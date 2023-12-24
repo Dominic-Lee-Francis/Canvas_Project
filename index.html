@@ -36,78 +36,106 @@
 
 </head>
 <body>
+    <!-- div for whole page, contains flexbox -->
     <div class="canvasToolBoard">
+        <!-- title -->
         <h1 class="h1">Welcome to the Drawing Room</h1>
         <div class="container">
+            <!-- tool board -->
             <section class="toolsBoard animate animate--fast slideInLeft">
+                <!-- first list for shape tools -->
                 <div class="row">
                     <label for="" class="title ">Shape Tools</label>
+                    <!-- Rectangle -->
                     <ul class="options">
                         <li class="option tool svg" id="rectangle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2 20V4h20v16zm2-2h16V6H4zm0 0V6z"/></svg>
                             <p>Rectangle</p>
                         </li>
+                        <!-- Circle -->
                         <li class="option tool circle svg" id="circle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"/></svg>
                             <p>Circle</p>
                         </li>
+                        <!-- Triangle -->
                         <li class="option tool svg" id="triangle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L1 21h22M12 6l7.53 13H4.47"/></svg>
                             <p>Triangle</p>
                         </li>
+                        <!-- Fill Color Checkbox-->
                         <li class="option">
                             <input type="checkbox" id="fillColor">
                             <label for="fillColor" class="fillColorLabel">Fill Color</label>
                         </li>
                     </ul>
                 </div>
+                <!-- second list for line tools -->
                 <div class="row">
                     <label for="" class="title">Line Tools</label>
                     <ul class="options">
-                        <li class="option active brush tool" id="brush">
+                        <!-- free draw / brush -->
+                        <li class="option active brush tool svg" id="brush">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 6.879L17.121 3A1.497 1.497 0 0 0 15 3L4.061 13.939c-.293.293-.558.727-.75 1.188C3.119 15.59 3 16.086 3 16.5V21h4.5c.414 0 .908-.119 1.371-.311c.463-.192.896-.457 1.189-.75L21 9a1.497 1.497 0 0 0 0-2.121M5.768 15.061l8.293-8.293L15.293 8L7 16.293zM7.5 19H6l-1-1v-1.5c0-.077.033-.305.158-.605c.01-.02 2.967 2.938 2.967 2.938c-.322.134-.548.167-.625.167m1.439-.768L7.707 17L16 8.707l1.232 1.232zm9-9L14.767 6.06l1.293-1.293l3.17 3.172z"/></svg>
                             <p>Free Draw</p>
                         </li>
-                        <li class="option tool" id="straightLine">
+                        <!-- Straight Line Tool -->
+                        <li class="option tool svg" id="straightLine">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M1 10a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1" clip-rule="evenodd"/></svg>
                             <p>Straight Line</p>
                         </li>
-                        <li class="option tool" id="curvedLine">
+                        <!-- Curved Line Tool -->
+                        <li class="option tool svg" id="curvedLine">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path  d="M19 20q-.425 0-.712-.325t-.338-.775q-.2-2.575-1.263-4.825t-2.775-3.962Q12.2 8.4 9.95 7.325T5.15 6.05q-.45-.05-.8-.337T4 5q0-.425.313-.712t.737-.263q3 .2 5.638 1.438T15.325 8.7q2 2 3.238 4.65T19.975 19q.025.425-.262.713T19 20"/></svg>
                             <p>Curved Line</p>
                         </li>
-                        <li class="option tool" id="eraser">
+                        <!-- Eraser -->
+                        <li class="option tool svg" id="eraser">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m16.24 3.56l4.95 4.94c.78.79.78 2.05 0 2.84L12 20.53a4.008 4.008 0 0 1-5.66 0L2.81 17c-.78-.79-.78-2.05 0-2.84l10.6-10.6c.79-.78 2.05-.78 2.83 0M4.22 15.58l3.54 3.53c.78.79 2.04.79 2.83 0l3.53-3.53l-4.95-4.95z"/></svg>
                             <p>Eraser</p>
                         </li>
-                        <li class="option tool" id="undoCanvasBtn">
+                        <!-- Undo -->
+                        <li class="option tool svg" id="undoCanvasBtn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 19v-2h7.1q1.575 0 2.738-1T18 13.5q0-1.5-1.162-2.5T14.1 10H7.8l2.6 2.6L9 14L4 9l5-5l1.4 1.4L7.8 8h6.3q2.425 0 4.163 1.575T20 13.5q0 2.35-1.737 3.925T14.1 19z"/></svg>
                             <p>Undo</p>
                         </li>
+                        <!-- brush width using a slider -->
                         <li class="option">
-                            <input type="range" id="sizeSlider" min="1" max="40" value="5">
+                            <div class="range">
+                                <div class="field">
+                                    <div class="value valueLeft">1</div>
+                                        <input type="range" id="sizeSlider" min="1" max="40" value="5" steps="1">
+                                    <div class="value valueRight">40</div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
+                <!-- third list for color tools -->
                 <div class="row">
                     <label for="" class="title">Pick your Color</label>
                     <ul class="options colorList">
+                        <!-- Brush Color -->
                         <li class="option colorListItem">
-                            <label for="stroke">Brush</label>
+                            <label for="stroke">Pencil</label>
                             <input type="color" id="colorPicker" name="color">
                         </li>
+                        <!-- background Color -->
                         <li class="option colorListItem">
                             <label for="stroke">Background</label>
                             <input type="color" id="colorPickerBackground" name="color" value="#ffffff">
                         </li>
                     </ul>
                 </div>
+                <!-- fourth list for save and clear canvas -->
                 <div class="row">
+                    <!-- Save Image Btn -->
                     <label for="" class="title">Save your Image</label>
                     <button class="btn" id="saveCanvasBtn">Save Image</button>
+                    <!-- Delete Image Btn -->
                     <button class="btn" id="clearCanvasBtn">Delete Image</button> 
                 </div>
             </section>
+            <!-- drawing board -->
             <section class="drawingBoard animate animate--fast slideInLeft">
                 <canvas></canvas>
             </section>

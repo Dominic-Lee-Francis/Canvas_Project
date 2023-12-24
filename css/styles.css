@@ -38,7 +38,7 @@ Utility Classes
 }
 
 
-@keyframes slideInLeft {
+/* @keyframes slideInLeft {
     from {
         transform: translateX(-100%);
     }
@@ -54,7 +54,7 @@ Utility Classes
     to {
         transform: translateX(0);
     }
-}
+} */
 
 .slideInLeft {
     animation-name: slideInLeft;

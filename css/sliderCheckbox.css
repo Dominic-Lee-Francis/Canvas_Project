@@ -4,6 +4,52 @@
     margin-bottom: 10px;
 }
 
+/* slider including number tracker above */
+.range {
+    height: 40px;
+    width: 100%;
+    background-color: none;
+    padding-top: 30px;
+}
+
+.range .sliderValue {
+    position: relative;
+    width: 100%;
+}
+
+
+/* slider excluding number tracker above */
+.range .field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* left and right number values */
+.range .field .value {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    margin-left: 5px;
+}
+
+/* left value on slider */
+.range .field .value.valueLeft {
+    left: -18px;
+    padding-bottom: 10px;
+}
+
+/* right value on slider */
+.range .field .value.valueRight {
+    right: -20px;
+    padding-bottom: 10px;
+}
+
+/* Checkbox */
+
 .option #fillColor {
     height: 20px;
     width: 20px;
