@@ -73,7 +73,7 @@ input[type="checkbox"] {
     align-items: center; /* centers the checkmark */
     justify-content: center; /* centers the checkmark */
 }
-
+/* after click adds check */
 input[type="checkbox"]:after {
     background-color: none;
     font-family: "Font Awesome 6 Free";
@@ -81,17 +81,20 @@ input[type="checkbox"]:after {
     font-weight: 900;
     font-size: 16px;
     color: white;
-    display: none;
+    display: none; /* removes checkmark when not checked */
 }
 
+/* changes color on hover */
 input[type="checkbox"]:hover {
     background-color: rgba(132, 132, 132, 0.7);
 }
 
+/* changes color when checked */
 input[type="checkbox"]:checked {
     background-color: rgba(132, 132, 132, 0.7);
 }
 
+/* adds checkmark when checked by adding the display we removed before */
 input[type="checkbox"]:checked:after {
     display: block;
 }
